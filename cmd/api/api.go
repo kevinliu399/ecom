@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/kevinliu399/ecom/service/user"
+	"github.com/kevinliu399/ecom/services/user"
 )
 
 type APIServer struct {

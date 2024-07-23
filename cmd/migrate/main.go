@@ -4,21 +4,21 @@ import (
 	"log"
 	"os"
 
-	_ "github.com/go-sql-driver/mysql" // mysql driver
+	_ "github.com/go-sql-driver/mysql"
 	mysqlDriver "github.com/go-sql-driver/mysql"
 	"github.com/golang-migrate/migrate/v4"
 	mysqlMigrate "github.com/golang-migrate/migrate/v4/database/mysql"
 	_ "github.com/golang-migrate/migrate/v4/source/file"
-	"github.com/kevinliu399/ecom/configs"
+	config "github.com/kevinliu399/ecom/configs"
 	"github.com/kevinliu399/ecom/db"
 )
 
 func main() {
 	cfg := mysqlDriver.Config{
-		User:                 configs.Envs.DBUser,
-		Passwd:               configs.Envs.DBPassword,
-		Addr:                 configs.Envs.DBAddress,
-		DBName:               configs.Envs.DBName,
+		User:                 config.Envs.DBUser,
+		Passwd:               config.Envs.DBPassword,
+		Addr:                 config.Envs.DBAddress,
+		DBName:               config.Envs.DBName,
 		Net:                  "tcp",
 		AllowNativePasswords: true,
 		ParseTime:            true,

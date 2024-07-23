@@ -6,8 +6,8 @@ import (
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/kevinliu399/ecom/cmd/api"
-	"github.com/kevinliu399/ecom/cmd/db"
-	"github.com/kevinliu399/ecom/config"
+	config "github.com/kevinliu399/ecom/configs"
+	"github.com/kevinliu399/ecom/db"
 )
 
 func main() {
