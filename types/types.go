@@ -22,3 +22,22 @@ type UserStore interface {
 	GetUserByID(id int) (*User, error)
 	CreateUser(User) error
 }
+
+type ProductStore interface {
+	GetProducts() ([]Product, error)
+}
+
+type Product struct {
+	ID          int     `json:"id"`
+	Name        string  `json:"name"`
+	Description string  `json:"description"`
+	Price       float64 `json:"price"`
+	Image       string  `json:"image"`
+	Quantity    int     `json:"quantity"`
+	CreatedAt   string  `json:"created_at"`
+}
+
+type LoginUserPayload struct {
+	Email    string `json:"email" validate:"required,email"`
+	Password string `json:"password" validate:"required"`
+}
